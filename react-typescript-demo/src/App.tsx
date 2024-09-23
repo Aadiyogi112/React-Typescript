@@ -1,6 +1,8 @@
 import "./App.css";
+import { Button } from "./components/Button";
 import Greet from "./components/Greet";
 import { Heading } from "./components/Heading";
+import { Input } from "./components/Input";
 import { Oscar } from "./components/Oscar";
 import PersonComponent from "./components/PersonComponent";
 import PersonList from "./components/PersonList";
@@ -29,12 +31,14 @@ function App() {
     <div className="App">
       <Greet name="Abhishek" loggedIn={false} />
       <PersonComponent name={personName} />
-      <PersonList names={nameList}/>
+      <PersonList names={nameList} />
       <Status status="Loading" />
       <Heading>PlaceHolder Text</Heading>
       <Oscar>
         <Heading>Oscar goes to Leonardo Dicaprio</Heading>
       </Oscar>
+      <Button handleClick={(event,id) => console.log("Clicked", event, id)} />
+        <Input value="abhishek" handleChange={(event) => console.log(event)} />
     </div>
   );
 }
