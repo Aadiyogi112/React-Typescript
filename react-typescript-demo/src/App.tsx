@@ -1,5 +1,6 @@
 import "./App.css";
 import { Button } from "./components/Button";
+import { Container } from "./components/Container";
 import Greet from "./components/Greet";
 import { Heading } from "./components/Heading";
 import { Input } from "./components/Input";
@@ -37,8 +38,16 @@ function App() {
       <Oscar>
         <Heading>Oscar goes to Leonardo Dicaprio</Heading>
       </Oscar>
-      <Button handleClick={(event,id) => console.log("Clicked", event, id)} />
-        <Input value="abhishek" handleChange={(event) => console.log(event)} />
+      <Button handleClick={(event, id) => console.log("Clicked", event, id)} />
+      <Input value="abhishek" handleChange={(event) => console.log(event)} />
+      <Container
+        styles={{
+          border: "1px solid black",
+          padding: "1rem",
+          margin: "1rem",
+          width: "50%",
+        }}
+      />
     </div>
   );
 }
