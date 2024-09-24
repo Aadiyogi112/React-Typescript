@@ -7,6 +7,8 @@ import { Input } from "./components/Input";
 import { Oscar } from "./components/Oscar";
 import PersonComponent from "./components/PersonComponent";
 import PersonList from "./components/PersonList";
+import LoginComponent from "./components/state/Login";
+import User from "./components/state/User";
 import Status from "./components/Status";
 
 function App() {
@@ -48,6 +50,8 @@ function App() {
           width: "50%",
         }}
       />
+      <LoginComponent />
+      <User/>
     </div>
   );
 }
