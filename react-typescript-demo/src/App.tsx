@@ -3,6 +3,7 @@ import { Button } from "./components/Button";
 import { Container } from "./components/Container";
 import { Box } from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
+import { UserContextProvider } from "./components/context/UserContext";
 import Greet from "./components/Greet";
 import { Heading } from "./components/Heading";
 import { Input } from "./components/Input";
@@ -34,9 +35,12 @@ function App() {
   };
   return (
     <div className="App">
-      <ThemeContextProvider>
+      {/* <ThemeContextProvider>
         <Box />
-      </ThemeContextProvider>
+      </ThemeContextProvider> */}
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }
