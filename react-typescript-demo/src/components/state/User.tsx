@@ -6,12 +6,12 @@ type AuthUser = {
 };
 
 const User = () => {
-  const [user, setUser] = useState<AuthUser | null>(null);
+  const [user, setUser] = useState<AuthUser>({} as AuthUser);
   const loginHandler = () => {
     setUser({ name: "Abhishek", email: "tLw9n@example.com" });
   };
   const logoutHandler = () => {
-    setUser(null);
+    setUser({} as AuthUser);
   };
   return (
     <div>
