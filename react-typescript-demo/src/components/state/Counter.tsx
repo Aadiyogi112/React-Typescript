@@ -4,19 +4,27 @@ type CounterState = {
   count: number;
 };
 
-type ActionType = {
-  type: string;
-  payload: number;
-};
+type ActionType = UpdateAction | ResetAction;
+
+type UpdateAction={
+    type: "increment" | "decrement";
+    payload: number;
+}
+
+type ResetAction={
+    type: "reset";
+}
 
 const initialState = { count: 0 };
 
 function reducer(state: CounterState, action: ActionType) {
   switch (action.type) {
-    case 'increment':
+    case "increment":
       return { count: state.count + action.payload };
-    case 'decrement':
+    case "decrement":
       return { count: state.count - action.payload };
+    case "reset":
+      return initialState;
     default:
       throw new Error();
   }
@@ -38,6 +46,9 @@ const Counter: React.FC = () => {
 
       <button onClick={() => dispatch({ type: "increment", payload: 10 })}>
         Decrement
+      </button>
+      <button onClick={() => dispatch({ type: "reset"})}>
+        Reset
       </button>
     </div>
   );
