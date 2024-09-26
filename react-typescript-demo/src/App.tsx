@@ -7,6 +7,7 @@ import { UserContextProvider } from "./components/context/UserContext";
 import { List } from "./components/generics/List";
 import Greet from "./components/Greet";
 import { Heading } from "./components/Heading";
+import { CustomButton } from "./components/html/Button";
 import { Input } from "./components/Input";
 import { Oscar } from "./components/Oscar";
 import PersonComponent from "./components/PersonComponent";
@@ -57,8 +58,12 @@ function App() {
         onClick={(item) => console.log(item)}
       />
        */}
-      <RandomNumber value={10} isPositive />
+      {/* <RandomNumber value={10} isPositive />
       <Toast position="right-bottom" />
+       */}
+      <CustomButton variant="primary" onClick={() => console.log("clicked")}>
+        Primary Button
+      </CustomButton>
     </div>
   );
 }
