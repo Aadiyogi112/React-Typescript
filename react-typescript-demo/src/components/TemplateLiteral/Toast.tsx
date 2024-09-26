@@ -2,7 +2,7 @@ type PositionH = "left" | "right" | "center";
 type PositionV = "top" | "bottom" | "middle";
 
 type ToastProps = {
-  position: `${PositionH}-${PositionV}`;
+  position: Exclude<`${PositionH}-${PositionV}`, "center-center"> | "center";
 };
 
 export const Toast = ({ position }: ToastProps) => {
