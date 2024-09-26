@@ -4,6 +4,7 @@ import { Container } from "./components/Container";
 import { Box } from "./components/context/Box";
 import { ThemeContextProvider } from "./components/context/ThemeContext";
 import { UserContextProvider } from "./components/context/UserContext";
+import { List } from "./components/generics/List";
 import Greet from "./components/Greet";
 import { Heading } from "./components/Heading";
 import { Input } from "./components/Input";
@@ -38,9 +39,21 @@ function App() {
       {/* <ThemeContextProvider>
         <Box />
       </ThemeContextProvider> */}
-      <UserContextProvider>
+      {/* <UserContextProvider>
         <User />
-      </UserContextProvider>
+      </UserContextProvider> */}
+      <List
+        items={["Abhishek", "Abhishek2", "Abhishek3"]}
+        onClick={(item) => console.log(item)}
+      />
+      <List
+        items={[1, 2, 3]}
+        onClick={(item) => console.log(item)}
+      />
+       <List
+        items={[{first: 'Abhishek',last:'something'}, {first: 'Abhishek2',last:'something2'}, {first: 'Abhishek3',last:'something3'}]}
+        onClick={(item) => console.log(item)}
+      />
     </div>
   );
 }
