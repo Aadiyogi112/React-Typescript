@@ -11,6 +11,7 @@ import { Input } from "./components/Input";
 import { Oscar } from "./components/Oscar";
 import PersonComponent from "./components/PersonComponent";
 import PersonList from "./components/PersonList";
+import { RandomNumber } from "./components/restriction/RandomNumber";
 import LoginComponent from "./components/state/Login";
 import User from "./components/state/User";
 import Status from "./components/Status";
@@ -42,7 +43,7 @@ function App() {
       {/* <UserContextProvider>
         <User />
       </UserContextProvider> */}
-      <List
+      {/* <List
         items={["Abhishek", "Abhishek2", "Abhishek3"]}
         onClick={(item) => console.log(item)}
       />
@@ -54,6 +55,8 @@ function App() {
         items={[{first: 'Abhishek',last:'something'}, {first: 'Abhishek2',last:'something2'}, {first: 'Abhishek3',last:'something3'}]}
         onClick={(item) => console.log(item)}
       />
+       */}
+       <RandomNumber value={10} isPositive/>
     </div>
   );
 }
